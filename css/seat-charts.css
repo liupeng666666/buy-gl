@@ -1,0 +1,142 @@
+.seatCharts {
+    width: 750px;
+    margin: 0px auto 0 auto;
+    min-height: 450px;
+}
+
+.booking-details { /*width:200px;height: 450px; */
+}
+
+.booking-details h3 {
+    margin: 5px 5px 0 0;
+    font-size: 16px;
+}
+
+.booking-details p {
+    line-height: 26px;
+    font-size: 16px;
+    color: #999;
+}
+
+.booking-details p span {
+    color: #666;
+}
+
+div.seatCharts-cell {
+    color: #182C4E;
+    height: 50px;
+    width: 50px;
+    line-height: 25px;
+    margin: 10px;
+    float: left;
+    text-align: center;
+    outline: none;
+    font-size: 13px;
+}
+
+div.seatCharts-seat {
+    line-height: 50px;
+    color: #fff;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+div.seatCharts-row { /*height: 35px;*/
+}
+
+div.seatCharts-seat.available {
+    background-color: #39BAD3;
+}
+
+div.seatCharts-seat.available-temporary {
+    background-color: #3a78c3;
+}
+
+div.seatCharts-seat.focused {
+    background-color: #32A1B7;
+    border: none;
+}
+
+div.seatCharts-seat.selected {
+    background-color: #FF7700;
+}
+
+div.seatCharts-seat.unavailable {
+    background-color: #C4C1BB;
+    cursor: not-allowed;
+}
+
+div.seatCharts-container { /*width: 400px;*/
+    padding: 20px;
+    overflow: hidden;
+}
+
+div.seatCharts-container p {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 0 10px 10px;
+}
+
+ul.seatCharts-legendList {
+    padding-left: 90px;
+}
+
+.seatCharts-legend {
+    overflow: hidden;
+}
+
+.seatCharts-legendItem {
+    float: left;
+    margin-top: 10px;
+    margin-left: 45px;
+    line-height: 2;
+}
+
+.seatCharts-legendItem .seatCharts-cell {
+    width: 20px;
+    height: 20px;
+    margin: 0px;
+}
+
+
+span.seatCharts-legendDescription {
+    margin-left: 5px;
+    line-height: 30px;
+}
+
+.checkout-button {
+    display: block;
+    width: 80px;
+    height: 24px;
+    line-height: 20px;
+    margin: 10px auto;
+    border: 1px solid #999;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.seatCharts-legendItem span {
+    line-height: 25px;
+    color: #909090;
+}
+
+#selected-seats {
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: none; /*width: 200px;*/
+}
+
+#selected-seats li {
+    float: left;
+    width: 72px;
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #d3d3d3;
+    background: #f7f7f7;
+    margin: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}

@@ -1,0 +1,467 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>静脉输液监控系统TIPS&PCTS</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- style-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css"/>
+    <link href="css/custom.min.css" rel="stylesheet" type="text/css">
+    <!--jQuery-->
+    <script src="js/jquery.min.js"></script>
+    <!-- sliphover JS -->
+    <script src="js/randomColor.js"></script>
+    <script src="js/jquery.sliphover.min.js"></script>
+    <!-- tTop JS -->
+    <script src="js/tTop.js"></script>
+    <style>
+        .item {
+            width: 31%;
+            height: 147px;
+            display: inline-block;
+            /*-webkit-transition: all 0.3s ease-out;*/
+        }
+    </style>
+</head>
+
+<body role="monitor">
+<!--页面标示：role=""的内容跟顶部菜单栏内对应的data-role=""一致；-->
+<!--===========BEGIN PAGE===============-->
+<div class="wrapper">
+    <!--====BEGIN HEADER ====-->
+    <header class="navbar navbar-inverse navbar-fixed-top box-shadow topbar" role="navigation">
+        <div class="container navbar-inner">
+            <div class="navbar-brand">
+                <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <!--/brand-->
+            <div class="top-nav-content">
+                <button class="button-menu-mobile open-left"><i class="fa fa-bars"></i></button>
+                <ul class="nav navbar-nav navbar-right user-nav">
+                    <li class="dropdown iconify ">
+                        <a href="monitor.html" class=""><i class="fa fa-exclamation-triangle"></i><span
+                                class="label label-danger absolute">3</span></a>
+                    </li>
+                    <li class="dropdown iconify ">
+                        <a href="message.html" class=""><i class="fa fa-envelope"></i><span
+                                class="label label-danger absolute">3</span></a>
+                    </li>
+                    <li class="dropdown topbar-profile">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <span class="topbar-profile-name">欢迎你：JaneDoe</span><i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="userset.html"><i class="fa fa-user"></i> 个人资料</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown iconify">
+                        <a href="login.html" class=""><i class="fa fa-power-off"></i>安全退出</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!--/top-nav-content-->
+        </div>
+        <!--/container-fluid-->
+    </header>
+    <!--/header-->
+    <!--====END HEADER ====-->
+
+    <!--====BEGIN SIDEBAR====-->
+    <div class="sidebar-left sidebar-nicescroller">
+        <div id="accordion">
+            <div class="content">
+                <ul class="sidebar-menu">
+                    <li class="static">静脉输液监控系统v1.0</li>
+                    <li class="active">
+                        <a href="index.html" data-role="main">
+                            <i class="fa fa-home icon-sidebar"></i><i class="fa fa-angle-right icon-right"></i>首页</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-cog icon-sidebar"></i><i
+                                class="fa fa-angle-right icon-right  chevron-icon-sidebar"></i>系统管理</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="depart.html" data-role="depart">组织机构</a>
+                            </li>
+                            <li>
+                                <a href="role.html" data-role="role">角色设置</a>
+                            </li>
+                            <li>
+                                <a href="user.html" data-role="user">用户设置</a>
+                            </li>
+                            <li>
+                                <a href="control.html" data-role="control">权限管理</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="systemlog.html" data-role="systemlog">
+                            <i class="fa fa-file-text-o icon-sidebar"></i><i class="fa fa-angle-right icon-right"></i>系统日志</a>
+                    </li>
+                    <li>
+                        <a href="hardware.html" data-role="hardware">
+                            <i class="fa fa-bars icon-sidebar"></i><i
+                                class="fa fa-angle-right icon-right"></i>硬件设备管理</a>
+                    </li>
+                    <li>
+                        <a href="bed.html" data-role="bed">
+                            <i class="fa fa-bed icon-sidebar"></i><i class="fa fa-angle-right icon-right"></i>床位信息设置</a>
+                    </li>
+                    <li>
+                        <a href="bedmanage.html" data-role="bedmanage">
+                            <i class="fa fa-bed icon-sidebar"></i><i class="fa fa-angle-right icon-right"></i>床位信息管理</a>
+                    </li>
+                    <li>
+                        <a href="monitor.html" data-role="monitor">
+                            <i class="fa fa-exclamation-circle icon-sidebar"></i><i
+                                class="fa fa-angle-right icon-right"></i>输液实时监控</a>
+                    </li>
+                    <li>
+                        <a href="datahistory.html" data-role="datahistory">
+                            <i class="fa fa-calendar-check-o icon-sidebar"></i><i
+                                class="fa fa-angle-right icon-right"></i>输液历史查询</a>
+                    </li>
+                    <li>
+                        <a href="duty.html" data-role="duty">
+                            <i class="fa fa-user icon-sidebar"></i><i class="fa fa-angle-right icon-right"></i>值班管理</a>
+                    </li>
+                    <li>
+                        <a href="chart.html" data-role="chart">
+                            <i class="fa fa-bar-chart icon-sidebar"></i><i class="fa fa-angle-right icon-right"></i>数据统计</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-envelope-o icon-sidebar"></i><i
+                                class="fa fa-angle-right icon-right  chevron-icon-sidebar"></i>系统消息</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="message.html" data-role="message">收件箱</a>
+                            </li>
+                            <li>
+                                <a href="outbox.html" data-role="outbox">发件箱</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!--/sidebar-menu-->
+            </div>
+            <!--/content-->
+        </div>
+        <!--/accordion-->
+    </div>
+    <!--sidebar-left -->
+    <!--====END SIDEBAR====-->
+
+    <!--==== BEGIN PAGE CONTENT =====-->
+    <div class="page-content" id="container">
+        <h1 class="page-heading"><i class="pagehead-blue-icon"></i>输液实时监控</h1>
+        <!--==== begin container-fluid ====-->
+        <div class="container-fluid" style="height:2000px;">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel borderBox">
+                        <form>
+                            <ul class="panel-search">
+                                <li>
+                                    <dl>
+                                        <dt>按床位号排序</dt>
+                                        <dd>
+                                            <select class="sf-input">
+                                                <option>床位号由小到大</option>
+                                                <option>床位号由大到小</option>
+                                            </select>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>按剩余时间排序</dt>
+                                        <dd style="padding-left:104px;">
+                                            <select class="sf-input">
+                                                <option>剩余时间由少到多</option>
+                                                <option>剩余时间由多到少</option>
+                                            </select>
+                                        </dd>
+                                    </dl>
+                                </li>
+
+                                <li>
+                                    <dl>
+                                        <button type="button" class="btn btn-primary" style="margin-left:30px;">回到底部
+                                        </button>
+                                    </dl>
+                                </li>
+                            </ul>
+
+                        </form>
+                    </div>
+                    <!--/panel-->
+                </div>
+                <!--/col-xs-12-->
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="monitor-body" id="container">
+                        <div class="monitor-block item" data-caption="
+                     <h4 style='margin-top:-30px;'>药品信息</h4>
+                     <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div>
+                    </div>
+                    <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div></div>
+                    </div>
+                  ">
+                            <h2>02床</h2>
+                            <div class="info-name">李春丽</div>
+                            <div class="monitor-mode">已滴完</div>
+                            <div class="infusion-progress">
+                                <div class="infusion-progress-end">已滴完</div>
+                            </div>
+                            <!--/infusion-progress-->
+                            <div class="infusion-info">
+                                <span>390ml /500ml</span>
+                                <span class="text-yellow">[45分钟]</span>
+                                <span>60滴/分钟</span>
+                                <span>60~90滴/分钟</span>
+                            </div>
+                        </div>
+                        <!--/monitor-block-->
+                        <div class="monitor-block item" data-caption="
+                     <h4 style='margin-top:-30px;'>药品信息</h4>
+                     <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div>
+                    </div>
+                    <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div></div>
+                    </div>
+                  ">
+                            <h2>04床</h2>
+                            <div class="info-name">李春丽</div>
+                            <div class="monitor-mode">滴速过快</div>
+                            <div class="infusion-progress">
+                                <div class="infusion-progress-back">
+                                    <div class="progress-bar progress-bar-warning" style="width: 40%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/infusion-progress-->
+                            <div class="infusion-info">
+                                <span>390ml /500ml</span>
+                                <span class="text-yellow">[45分钟]</span>
+                                <span>60滴/分钟</span>
+                                <span>60~90滴/分钟</span>
+                            </div>
+                        </div>
+                        <!--/monitor-block-->
+                        <div class="monitor-block item" data-caption="
+                     <h4 style='margin-top:-30px;'>药品信息</h4>
+                     <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div>
+                    </div>
+                    <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div></div>
+                    </div>
+                  ">
+                            <h2>06床</h2>
+                            <div class="info-name">李春丽</div>
+                            <div class="monitor-mode">滴速过慢</div>
+                            <div class="infusion-progress">
+                                <div class="infusion-progress-back">
+                                    <div class="progress-bar progress-bar-warning" style="width: 40%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/infusion-progress-->
+                            <div class="infusion-info">
+                                <span>390ml /500ml</span>
+                                <span class="text-yellow">[45分钟]</span>
+                                <span>60滴/分钟</span>
+                                <span>60~90滴/分钟</span>
+                            </div>
+                        </div>
+                        <!--/monitor-block-->
+
+                        <div class="monitor-block item" data-caption="
+                     <h4 style='margin-top:-30px;'>药品信息</h4>
+                     <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div>
+                    </div>
+                    <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div></div>
+                    </div>
+                  ">
+                            <h2>01床</h2>
+                            <div class="info-name">李春丽</div>
+                            <div class="monitor-mode">工作正常</div>
+                            <div class="infusion-progress">
+                                <div class="infusion-progress-back">
+                                    <div class="progress-bar progress-bar-success" style="width: 40%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/infusion-progress-->
+                            <div class="infusion-info">
+                                <span>390ml /500ml</span>
+                                <span class="text-yellow">[45分钟]</span>
+                                <span>60滴/分钟</span>
+                                <span>60~90滴/分钟</span>
+                            </div>
+                        </div>
+                        <!--/monitor-block-->
+
+                        <div class="monitor-block item" data-caption="
+                     <h4 style='margin-top:-30px;'>药品信息</h4>
+                     <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div>
+                    </div>
+                    <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div></div>
+                    </div>
+                  ">
+                            <h2>03床</h2>
+                            <div class="info-name">李春丽</div>
+                            <div class="monitor-mode">工作正常</div>
+                            <div class="infusion-progress">
+                                <div class="infusion-progress-back">
+                                    <div class="progress-bar progress-bar-success" style="width: 40%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/infusion-progress-->
+                            <div class="infusion-info">
+                                <span>390ml /500ml</span>
+                                <span class="text-yellow">[45分钟]</span>
+                                <span>60滴/分钟</span>
+                                <span>60~90滴/分钟</span>
+                            </div>
+                        </div>
+                        <!--/monitor-block-->
+
+                        <div class="monitor-block item" data-caption="
+                     <h4 style='margin-top:-30px;'>药品信息</h4>
+                     <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div>
+                    </div>
+                    <div style='width:50%;margin:0 auto;text-align:center;'>
+                        <div style='float:left;'>维生素c&nbsp;3.0</div>
+                        <div style='float:right;'>维生素c&nbsp;3.0</div>
+                        <div style='clear:both;'></div></div>
+                    </div>
+                  ">
+                            <h2>05床</h2>
+                            <div class="info-name">李春丽</div>
+                            <div class="monitor-mode">工作正常</div>
+                            <div class="infusion-progress">
+                                <div class="infusion-progress-back">
+                                    <div class="progress-bar progress-bar-success" style="width: 40%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/infusion-progress-->
+                            <div class="infusion-info">
+                                <span>390ml /500ml</span>
+                                <span class="text-yellow">[45分钟]</span>
+                                <span>60滴/分钟</span>
+                                <span>60~90滴/分钟</span>
+                            </div>
+                        </div>
+                        <!--/monitor-block-->
+
+
+                    </div>
+                    <!--/monitor-body-->
+                </div>
+                <!--/col-lg-5-->
+            </div>
+            <!--/row-->
+        </div>
+        <!--/container-fluid-->
+        <div id="tbox">
+            <a id="gotop" href="javascript:void(0)"></a>
+        </div>
+        <!--/tbox-->
+
+        <div class="footer">
+            <div class="pull-left">E-mail： service@quanfon.com</div>
+            <div class="pull-right">©
+                <script>var copyrightdate = new Date();
+                this.year = copyrightdate.getFullYear();
+                document.write(this.year);</script>
+                年济南泉峰信息技术有限公司. All Right Reserved. 鲁ICP备13031419号-2
+            </div>
+        </div>
+        <!--/footer-->
+    </div>
+    <!--==== END PAGE CONTENT =====-->
+
+</div>
+<!-- /.wrapper -->
+<!--===========END PAGE===============-->
+
+
+<!--提示层-->
+<div class="pop-dialog" id="tip-public">
+    <div class="tip-inner">
+        <div class="tip-header">
+            <button type="button" class="close" onClick="hidePop('#tip-public')">&times;</button>
+            <h4>重要提示</h4>
+        </div>
+        <div class="tip-content">
+            Bug转发成功。
+        </div>
+        <div class="tip-footer">
+            <button type="button" class="btn btn-primary">确定</button>
+            <button type="button" class="btn btn-default" onClick="hidePop('#tip-public')">取消</button>
+        </div>
+    </div>
+</div>
+<!--pop-window -->
+
+
+<!--COMMON JS-->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/theme.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //call sliphover
+        $('#container').sliphover({
+            target: '.item',
+            caption: 'data-caption'
+        });
+    })
+</script>
+</body>
+</html>
